@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>موقع حقيقي+ - شرح</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand">
+        <div class="brandRow">
+          <!-- مكان اللوقو (غيري الصورة داخل public/assets/logo.jpeg) -->
+          <div class="logoHolder">
+            <img src="assets/logo.jpeg" alt="logo" class="logoImg" />
+          </div>
+          <div class="brandTexts">
+            <h1 data-i18n="brandTitle"></h1>
+            <p data-i18n="brandSub"></p>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <button class="pill" id="langBtn"></button>
+        <button class="pill" id="themeBtn" data-i18n="theme"></button>
+        <button class="pill" id="logoutBtn" data-i18n="logout"></button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="introTitle"></h2>
+      <p class="muted" data-i18n="introText"></p>
+
+      <!-- تقسيم الشاشة لجزئين -->
+      <div class="grid2" style="margin-top:12px;">
+        <div class="card" style="margin:0;">
+          <h2 data-i18n="activity1Title"></h2>
+          <pre class="muted preText" data-i18n="activity1Desc"></pre>
+
+          <div class="checkboxRow">
+            <input type="checkbox" id="u1" />
+            <label for="u1" data-i18n="understood"></label>
+          </div>
+
+          <button class="smallBtn" id="not1" style="margin-top:10px;" data-i18n="notUnderstood"></button>
+        </div>
+
+        <div class="card" style="margin:0;">
+          <h2 data-i18n="activity2Title"></h2>
+          <pre class="muted preText" data-i18n="activity2Desc"></pre>
+
+          <div class="checkboxRow">
+            <input type="checkbox" id="u2" />
+            <label for="u2" data-i18n="understood"></label>
+          </div>
+
+          <button class="smallBtn" id="not2" style="margin-top:10px;" data-i18n="notUnderstood"></button>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top:14px;">
+        <span class="notice" style="margin:0;">
+          إذا ضغطتِ "لم أفهم" ارسلي سؤالك وسيصل للأدمن.
+        </span>
+        <button class="btn" id="nextBtn" data-i18n="next" disabled></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- مودال السؤال -->
+  <div class="modalOverlay" id="qModal">
+    <div class="modal">
+      <div class="modalHeader">
+        <h3 data-i18n="askQuestionTitle"></h3>
+        <button class="closeX" id="closeQ">X</button>
+      </div>
+      <div class="field" style="margin-top:10px;">
+        <textarea id="qText" data-i18n-placeholder="askQuestionTitle"></textarea>
+      </div>
+      <div class="row" style="margin-top:12px;">
+        <button class="btn secondary" id="cancelQ" data-i18n="cancel"></button>
+        <button class="btn" id="submitQ" data-i18n="submit"></button>
+      </div>
+      <div id="qMsg"></div>
+    </div>
+  </div>
+
+  <script type="module" src="js/intro.js"></script>
+</body>
+</html>

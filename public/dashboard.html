@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>موقع حقيقي+ - صفحتك</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand">
+        <div class="brandRow">
+          <!-- مكان اللوقو (غيري الصورة داخل public/assets/logo.jpeg) -->
+          <div class="logoHolder">
+            <img src="assets/logo.jpeg" alt="logo" class="logoImg" />
+          </div>
+          <div class="brandTexts">
+            <h1 data-i18n="brandTitle"></h1>
+            <p data-i18n="brandSub"></p>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <button class="pill" id="langBtn"></button>
+        <button class="pill" id="themeBtn" data-i18n="theme"></button>
+        <button class="pill" id="logoutBtn" data-i18n="logout"></button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="dashTitle"></h2>
+      <p class="muted" id="helloUser"></p>
+    </div>
+
+    <!-- الثلاث مربعات -->
+    <div class="tiles" style="margin-top:18px;">
+      <!-- 1) أسئلتك وردنا -->
+      <div class="tile">
+        <h3 data-i18n="qnaBox"></h3>
+        <div id="qaList" class="notice">...</div>
+
+        <div class="field">
+          <label data-i18n="askAnother"></label>
+          <textarea id="newQ"></textarea>
+        </div>
+        <div class="row" style="margin-top:10px;">
+          <span></span>
+          <button class="btn" id="sendQ" data-i18n="submit"></button>
+        </div>
+        <div id="qaMsg"></div>
+      </div>
+
+      <!-- 2) الدائرة -->
+      <div class="tile">
+        <h3 id="wheelTitle" data-i18n="wheelBox"></h3>
+
+        <div class="wheelWrap">
+          <div class="pointer"></div>
+          <div class="wheelCanvas">
+            <canvas id="wheel" style="width:100%;height:100%;"></canvas>
+          </div>
+          <button class="btn" id="spinBtn" data-i18n="startSpin"></button>
+          <div class="notice" id="spinHint" data-i18n="spinningNote"></div>
+          <div class="notice" id="spinStatus" style="display:none;"></div>
+          <div class="centerLabel" id="pickedLabel"></div>
+        </div>
+      </div>
+
+      <!-- 3) مراجعة الشرح -->
+      <div class="tile">
+        <h3 data-i18n="reviewBox"></h3>
+        <p class="muted">
+          سيظهر نفس شرح الفعاليتين داخل نافذة.
+        </p>
+        <button class="btn secondary" id="reviewBtn" data-i18n="reviewBtn"></button>
+      </div>
+    </div>
+
+    
+    <!-- مودال: تحديد اسمك (شرط قبل تشغيل العجلة) -->
+    <div class="modalOverlay" id="selfNameModal">
+      <div class="modal">
+        <div class="modalHeader">
+          <h3 data-i18n="selfNameTitle"></h3>
+          <button class="pill" id="closeSelfName">×</button>
+        </div>
+
+        <p class="muted" data-i18n="selfNameDesc"></p>
+
+        <div class="field">
+          <label data-i18n="selfNameLabel"></label>
+          <select id="selfNameSelect" class="selectInput"></select>
+        </div>
+
+        <div id="selfNameMsg" style="margin-top:10px;"></div>
+
+        <div class="row" style="margin-top:14px;">
+          <button class="btn secondary" id="cancelSelfName" data-i18n="cancel"></button>
+          <button class="btn" id="saveSelfName" data-i18n="saveAndContinue"></button>
+        </div>
+      </div>
+    </div>
+<!-- مودال: نتيجة الدائرة -->
+    <div class="modalOverlay" id="pickModal">
+      <div class="modal">
+        <div class="modalHeader">
+          <h3 id="pickTitle"></h3>
+          <button class="closeX" id="closePick">X</button>
+        </div>
+        <p class="muted" id="pickDesc"></p>
+        <div class="notice">اضغطي أي مكان خارج النافذة للإغلاق.</div>
+      </div>
+    </div>
+
+    <!-- مودال: مراجعة الشرح -->
+    <div class="modalOverlay" id="reviewModal">
+      <div class="modal">
+        <div class="modalHeader">
+          <h3 data-i18n="introTitle"></h3>
+          <button class="closeX" id="closeReview">X</button>
+        </div>
+
+        <div class="grid2" style="margin-top:12px;">
+          <div class="card" style="margin:0;">
+            <h2 data-i18n="activity1Title"></h2>
+            <pre class="muted preText" data-i18n="activity1Desc"></pre>
+          </div>
+          <div class="card" style="margin:0;">
+            <h2 data-i18n="activity2Title"></h2>
+            <pre class="muted preText" data-i18n="activity2Desc"></pre>
+          </div>
+        </div>
+
+        <div class="notice">اضغطي خارج المربع للإغلاق.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>

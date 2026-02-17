@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>موقع حقيقي+ - Admin</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand">
+        <div class="brandRow">
+          <div class="logoHolder">
+            <img src="assets/logo.jpeg" alt="logo" class="logoImg" />
+          </div>
+          <div class="brandTexts">
+            <h1 data-i18n="adminTitle"></h1>
+            <p data-i18n="adminHint"></p>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <button class="pill" id="langBtn"></button>
+        <button class="pill" id="themeBtn" data-i18n="theme"></button>
+        <button class="pill" id="logoutBtn" data-i18n="logout"></button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="adminUsersTitle"></h2>
+      <div id="usersList" class="notice">...</div>
+    </div>
+
+    <div class="card">
+      <h2 data-i18n="adminInboxTitle"></h2>
+      <div id="list" class="notice">...</div>
+    </div>
+  </div>
+
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>

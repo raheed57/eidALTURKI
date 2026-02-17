@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>موقع حقيقي+</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand">
+        <div class="brandRow">
+          <!-- مكان اللوقو (غيري الصورة داخل public/assets/logo.jpeg) -->
+          <div class="logoHolder">
+            <img src="assets/logo.jpeg" alt="logo" class="logoImg" />
+          </div>
+          <div class="brandTexts">
+            <h1 data-i18n="brandTitle"></h1>
+            <p data-i18n="brandSub"></p>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <button class="pill" id="langBtn"></button>
+        <button class="pill" id="themeBtn" data-i18n="theme"></button>
+      </div>
+    </div>
+
+    <!-- شاشة ترحيب -->
+    <div class="card" id="welcomeCard">
+      <h2 data-i18n="welcomeTitle"></h2>
+      <!-- نص الترحيب + اللوقو الكبير -->
+      <div class="welcomeHero">
+        <div>
+          <pre class="muted preText" data-i18n="welcomeLongText"></pre>
+        </div>
+        <div class="welcomeLogoBig">
+          <img class="logoBigImg" src="assets/logo.jpeg" alt="logo" />
+        </div>
+      </div>
+      <div class="row">
+        <span></span>
+        <button class="btn" id="toLoginBtn" data-i18n="next"></button>
+      </div>
+    </div>
+
+    <!-- شاشة تسجيل الدخول -->
+    <div class="card" id="loginCard" style="display:none;">
+      <h2 data-i18n="loginTitle"></h2>
+      <p class="muted" data-i18n="loginText"></p>
+
+      <div class="field">
+        <label data-i18n="username"></label>
+        <input id="username" data-i18n-placeholder="username" />
+      </div>
+
+      <div class="field">
+        <label data-i18n="password"></label>
+        <input id="password" type="password" data-i18n-placeholder="password" />
+      </div>
+
+      <div class="checkboxRow">
+        <input type="checkbox" id="rememberMe" />
+        <label for="rememberMe" data-i18n="remember"></label>
+      </div>
+
+      <div class="row" style="margin-top:12px;">
+        <button class="btn secondary" id="backBtn" data-i18n="back"></button>
+        <button class="btn" id="loginBtn" data-i18n="loginBtn"></button>
+      </div>
+
+      <div id="msg"></div>
+    </div>
+  </div>
+
+  <script type="module" src="js/index.js"></script>
+</body>
+</html>
