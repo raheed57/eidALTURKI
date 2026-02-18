@@ -64,7 +64,7 @@ document.getElementById("loginBtn").addEventListener("click", async () => {
   const rememberMe = document.getElementById("rememberMe").checked;
 
   if (!username || !password) {
-    showMsg("error", "رجاءً اكتبي اسم المستخدم وكلمة المرور.");
+    showMsg("error", "رجاءً اكتب اسم المستخدم وكلمة المرور.");
     return;
   }
 
@@ -79,6 +79,6 @@ document.getElementById("loginBtn").addEventListener("click", async () => {
     return (location.href = "/intro.html");
   } catch (e) {
     if (e?.error === "WRONG_PASSWORD") showMsg("error", "كلمة المرور غير صحيحة لهذا الاسم.");
-    else showMsg("error", "حدث خطأ. تأكدي من البيانات وحاولي مرة أخرى.");
+    else showMsg("error", "حدث خطأ. تأكد من البيانات وحاول مرة أخرى.");
   }
 });
