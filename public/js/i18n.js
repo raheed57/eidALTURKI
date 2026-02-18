@@ -32,7 +32,6 @@ const dict = {
     loginText: "اكتب اسم المستخدم وكلمة المرور. إذا كان المستخدم جديد سيتم إنشاء حساب تلقائيًا.",
     username: "اسم المستخدم",
     password: "كلمة المرور",
-    remember: "تذكرني",
     loginBtn: "دخول",
 
     // Intro
@@ -155,7 +154,6 @@ Love you all 🤍🤍🤍🤍🤍🤍🤍🤍🤍🤍`,
     loginText: "Enter username and password. New usernames will be created automatically.",
     username: "Username",
     password: "Password",
-    remember: "Remember me",
     loginBtn: "Login",
 
     // Intro
