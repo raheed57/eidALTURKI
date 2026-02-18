@@ -86,14 +86,14 @@ document.getElementById("submitQ").addEventListener("click", async () => {
   const question = qText.value.trim();
   if (!question) {
     qMsg.className = "error";
-    qMsg.textContent = "اكتبي سؤالك أولاً.";
+    qMsg.textContent = "اكتب سؤالك أولاً.";
     return;
   }
 
   try {
     await apiPost("/api/questions", { question });
     qMsg.className = "success";
-    qMsg.textContent = "تم إرسال سؤالك للأدمن. تقدري تكملي للخطوة التالية.";
+    qMsg.textContent = "تم إرسال سؤالك للأدمن. تقدر تكمل للخطوة التالية.";
 
     // ✅ نسمح له يكمل حتى لو ما فعل "فهمت"
     nextBtn.disabled = false;
@@ -104,6 +104,6 @@ document.getElementById("submitQ").addEventListener("click", async () => {
 
   } catch {
     qMsg.className = "error";
-    qMsg.textContent = "تعذر الإرسال. حاولي مرة أخرى.";
+    qMsg.textContent = "تعذر الإرسال. حاول مرة أخرى.";
   }
 });
