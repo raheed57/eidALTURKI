@@ -17,7 +17,7 @@ const dict = {
 
     // Index
     welcomeTitle: "أهلاً وسهلاً",
-    welcomeText: "هذا الموقع مخصص لفعاليات العيد للعائلة. اضغطي التالي للبدء.",
+    welcomeText: "هذا الموقع مخصص لفعاليات العيد للعائلة. اضغط التالي للبدء.",
     welcomeLongText:
 `نورت ❤️
 هذا موقع مخصص لنا من انشاء اختكم و بنتكم الحلوه و الفنانه رهيد
@@ -29,7 +29,7 @@ const dict = {
     back: "رجوع",
 
     loginTitle: "تسجيل الدخول",
-    loginText: "اكتبي اسم المستخدم وكلمة المرور. إذا كان المستخدم جديد سيتم إنشاء حساب تلقائيًا.",
+    loginText: "اكتب اسم المستخدم وكلمة المرور. إذا كان المستخدم جديد سيتم إنشاء حساب تلقائيًا.",
     username: "اسم المستخدم",
     password: "كلمة المرور",
     remember: "تذكرني",
@@ -82,7 +82,7 @@ const dict = {
     askAnother: "اسأل سؤال جديد",
     noQuestionsYet: "لا يوجد أسئلة بعد.",
     cantLoadQuestions: "تعذر تحميل الأسئلة.",
-    writeQuestionFirst: "اكتبي سؤالك أولاً.",
+    writeQuestionFirst: "اكتب سؤالك أولاً.",
     questionSent: "تم إرسال سؤالك للأدمن.",
     cantSend: "تعذر الإرسال. حاولي مرة أخرى.",
     yourQuestion: "سؤالك",
@@ -104,9 +104,9 @@ const dict = {
     selfNameTitle: "قبل بدء العجلة",
     selfNameDesc: "اختار اسمك الحقيقي أولاً. بعدها العجلة ستختار لك اسمًا آخر لم يتم اختياره سابقاً، ولن يظهر لك اسمك.",
     selfNameLabel: "اسمك",
-    selectPlaceholder: "اختاري من القائمة...",
+    selectPlaceholder: "اختار من القائمة...",
     saveAndContinue: "حفظ والمتابعة",
-    mustChooseSelfName: "لازم تختارين اسمك من القائمة.",
+    mustChooseSelfName: "لازم تختار اسمك من القائمة.",
     invalidSelfName: "الاسم غير موجود ضمن قائمة العجلة.",
     saved: "تم الحفظ ✅",
     cantSave: "تعذر الحفظ.",
