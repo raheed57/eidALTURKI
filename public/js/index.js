@@ -61,7 +61,9 @@ function showMsg(type, text) {
 document.getElementById("loginBtn").addEventListener("click", async () => {
   const username = document.getElementById("username").value.trim();
   const password = document.getElementById("password").value;
-  const rememberMe = document.getElementById("rememberMe").checked;
+  const rememberEl = document.getElementById("rememberMe");
+  const rememberMe = rememberEl ? rememberEl.checked : false;
+
 
   if (!username || !password) {
     showMsg("error", "رجاءً اكتب اسم المستخدم وكلمة المرور.");
